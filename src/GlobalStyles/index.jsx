@@ -11,7 +11,6 @@ const GlobalStyle = createGlobalStyle`
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--primary);
     font-family: 'Inter', sans-serif;
     h1,h2,h3,h4{
         font-weight: bold;
