@@ -9,16 +9,7 @@ export const CardTech = ({tech, isTech}) =>{
             <InfoContainer background={!isTech ? '#E6F5EF': 'none'} color={!isTech ?'#11995E':'#999999'}>
                 <h4>{tech.title}</h4>
                 <div>
-                    {tech.status ?
-                    (
-                        <p>{tech.status}</p>
-                    )
-                    :
-                    (
-                        <p title={tech.description}>{tech.description}</p>
-                        
-                    )
-                    }
+                    {tech.status ? <p>{tech.status}</p> : <p title={tech.description}>{tech.description}</p> }
                 </div>
             </InfoContainer>
         </Container>

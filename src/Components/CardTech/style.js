@@ -32,7 +32,7 @@ export const InfoContainer = styled.div`
         border-radius: 5px;
 
         p{
-            max-width: 25ch;
+            max-width: 35ch;
             overflow: hidden;
             text-overflow:ellipsis;
             white-space: nowrap;

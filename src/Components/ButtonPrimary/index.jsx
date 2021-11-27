@@ -1,9 +1,9 @@
 import { Button } from "./style"
 
-const ButtonPrimary = ({ children, ...rest }) => {
+const ButtonPrimary = ({ children, isModal,...rest}) => {
     return(
         <>
-          <Button {...rest}>{ children }</Button>
+          <Button width={isModal? '100%': '95%'} {...rest}>{ children }</Button>
         </>
     )
 }

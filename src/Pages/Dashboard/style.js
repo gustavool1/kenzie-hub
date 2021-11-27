@@ -7,8 +7,25 @@ export const Container = styled.div`
     background-color: var(--grey-0);
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 `
 
+export const TechModal = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+`
+export const JobModal = styled.div`
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+`
 export const CardTechContainer = styled.div`
     width: 450px;
     height: 560px;
