@@ -14,9 +14,9 @@ export const IconContainer = styled.div`
  width: 71px;
  height: 77px;
  border-radius: 3px;
- background-color: var(--secondary);
+ background-color: ${((props)=> props.background)} ;
  svg{
-        color: white;
+        color: ${((props)=> props.color)};
         font-size: 30px;
     }
 `
@@ -26,9 +26,16 @@ export const InfoContainer = styled.div`
     justify-content: space-between;
     padding: 10px;
     div{
-        background-color: #E6F5EF;
-        color: var(--secondary);
+        background-color: ${((props)=>props.background)};
+        color: ${((props)=>props.color)};
         padding: 0 10px;
         border-radius: 5px;
+
+        p{
+            max-width: 25ch;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
     }
 `

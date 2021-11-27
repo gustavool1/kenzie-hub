@@ -1,0 +1,1 @@
+export const gettingJobs = (jobs) => ({type:"jobs/getJobs", jobs})
