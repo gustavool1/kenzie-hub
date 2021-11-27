@@ -14,6 +14,7 @@ body {
     font-family: 'Inter', sans-serif;
     h1,h2,h3,h4{
         font-weight: bold;
+        margin: 0;
     }
     h1{
         font-size:32px;

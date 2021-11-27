@@ -1,0 +1,1 @@
+export const gettingTechs = (techs) => ({type:"techs/getTechs", techs})

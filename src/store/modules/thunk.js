@@ -7,8 +7,8 @@ export const settingTokenThunk = (data) =>{
          .then((response)=>{
             console.log(response)
             dispatch(settingToken(response.data.token))
-            localStorage.setItem('token', data.token)
-
+            localStorage.setItem('token', response.data.token)
+            localStorage.setItem('id', response.data.user.id)
         })
     }
 }

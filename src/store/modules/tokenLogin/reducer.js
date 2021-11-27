@@ -1,6 +1,5 @@
 const initialState = JSON.stringify(localStorage.getItem('token')) || ''
 const tokenReducer = (state = initialState, action) =>{
-    console.log('reducer')
     switch(action.type){
         case "settingToken":
             const { token } = action

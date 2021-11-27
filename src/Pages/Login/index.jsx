@@ -28,7 +28,9 @@ const Login = () =>{
     const { token } = useSelector(store=>store)
     useEffect(()=>{
        
-        if(token!== "null")  console.log(token)
+        if(token!== "null"){
+            history.push("/dashboard")
+        }
     },[token])
     return(
         <Container>
