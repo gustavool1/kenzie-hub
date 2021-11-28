@@ -8,6 +8,15 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding: 20px 0px;
+    @media screen and (max-width:768px){
+        padding: 0;
+        width: 100%;
+        margin: 0 auto;
+        flex-direction: row-reverse;
+        height: 100%;
+
+    }
 `
 
 export const TechModal = styled.div`
@@ -28,10 +37,18 @@ export const JobModal = styled.div`
 
 `
 export const CardTechContainer = styled.div`
+    width: 100%;
     width: 450px;
     height: 560px;
     background-color: white;
-    
+    box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    @media screen and (max-width:768px){
+        width: 90%;
+        margin: 0 auto;
+        margin: 20px 0px;
+        height: 310px;
+    }
 `
 
 export const InfoTechContainer = styled.div`
@@ -86,6 +103,10 @@ export const TechList = styled.div`
         border-radius: 10px;
         background-color: var(--secondary);
     }
+
+    @media screen and (max-width:768px){
+        height: 250px;
+    }
 `
 
 
@@ -93,6 +114,16 @@ export const JobTechContainer = styled.div`
     width: 450px;
     height: 560px;
     background-color: white;
+    box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    @media screen and (max-width:768px){
+        width: 90%;
+        margin: 0 auto;
+        margin: 20px 0px;
+        height: 310px;
+
+    }
+    
 `
 export const JobList = styled.div`
     margin: 0 auto;
@@ -110,6 +141,10 @@ export const JobList = styled.div`
     ::-webkit-scrollbar-thumb {
         border-radius: 10px;
         background-color: var(--primary);
+    }
+
+    @media screen and (max-width:768px){
+        height: 250px;
     }
 `
 export const InfoJobContainer = styled.div`

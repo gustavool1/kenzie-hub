@@ -2,7 +2,7 @@ import { Container, IconContainer, InfoContainer } from "./style"
 import { IoCubeOutline, IoGitPullRequestOutline } from "react-icons/io5";
 export const CardTech = ({tech, isTech}) =>{
     return(
-        <Container>
+        <Container border={ !isTech ? '#11995E' : '#403CAA'}>
             <IconContainer background={!isTech ? '#11995E': '#ECECF7'} color={!isTech? '#fff': '#403CAA'}>
                 { !isTech ? <IoCubeOutline/>: <IoGitPullRequestOutline/>}
             </IconContainer>

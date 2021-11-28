@@ -9,6 +9,7 @@ import { gettingJobsThunk } from '../../store/modules/jobsRequisitions/thunks.js
 import FormCreatingJob from '../../Components/FormCreatingJob/index.jsx'
 import FormCreatingTech from '../../Components/FormCreatingTech/index.jsx'
 import ProfileCard from '../../Components/ProfileCard/index.jsx'
+import NavBar from '../../Components/Navbar/index.jsx'
 const Dashboard = () =>{
     const dispatch = useDispatch()
     const { techs, jobs} = useSelector(store=>store)
@@ -27,6 +28,8 @@ const Dashboard = () =>{
     },[])
     return(
         <Container>
+            <NavBar/>
+            <ProfileCard/>
             {techModalIsOpen && <TechModal><FormCreatingTech handleModalTech={handleModalTech}/></TechModal>}
             {jobModalIsOpen && <JobModal><FormCreatingJob handleModalJob={handleModalJob}/></JobModal>}
             <CardTechContainer>
@@ -39,7 +42,6 @@ const Dashboard = () =>{
                 </TechList>
             </CardTechContainer>
 
-
             <JobTechContainer>
                 <InfoJobContainer>
                     <h3>Meus trabalhos</h3>
@@ -49,7 +51,6 @@ const Dashboard = () =>{
                 {jobs.map((tech, key)=><CardTech key={key}tech={tech} isTech/>)}
                 </JobList>
             </JobTechContainer>
-            <ProfileCard/>
         </Container>
     )
 }

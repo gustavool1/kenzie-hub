@@ -3,8 +3,14 @@ import { IoMdPhonePortrait } from "react-icons/io";
 import ButtonSecondary from '../ButtonSecondary/index'
 import { IoMailOutline } from "react-icons/io5";
 import { useSelector } from "react-redux";
+import { useHistory } from "react-router";
 const ProfileCard = () =>{
     const { user } = useSelector(store=>store)
+    const history = useHistory()
+    const handleLogout = () =>{
+        localStorage.clear()
+        history.push('/')
+    }
     return(
         <Container>
             <UserInfo>
@@ -28,12 +34,12 @@ const ProfileCard = () =>{
                     <div>
                        <IoMailOutline/> 
                     </div>
-                    <div>
+                    <div >
                         <h4>Enviar Email</h4>
                         <p>{user.email}</p>
                     </div>
                 </EmailContainer>
-                    <ButtonSecondary>Sair</ButtonSecondary>
+                    <ButtonSecondary onClick={handleLogout}>Sair</ButtonSecondary>
             </Contacts>
         </Container>
     )

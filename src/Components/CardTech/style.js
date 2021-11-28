@@ -5,6 +5,12 @@ export const Container = styled.div`
     display: flex;
     height: 77px;
     margin: 10px 0px;
+    border-right: 3px solid var(--grey-0);
+    width: 95%;
+    transition: 1s;
+    :hover{
+        border-right: 3px solid ${((props)=> props.border)};
+    }
 `
 
 export const IconContainer = styled.div`
@@ -15,10 +21,14 @@ export const IconContainer = styled.div`
  height: 77px;
  border-radius: 3px;
  background-color: ${((props)=> props.background)} ;
+ transition: 1s;
+   
  svg{
         color: ${((props)=> props.color)};
         font-size: 30px;
     }
+    
+    
 `
 export const InfoContainer = styled.div` 
     display: flex;
@@ -32,10 +42,12 @@ export const InfoContainer = styled.div`
         border-radius: 5px;
 
         p{
-            max-width: 35ch;
+            max-width: 20ch;
             overflow: hidden;
             text-overflow:ellipsis;
             white-space: nowrap;
         }
+       
     }
+   
 `

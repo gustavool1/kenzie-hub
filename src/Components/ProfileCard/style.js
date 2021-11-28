@@ -5,6 +5,12 @@ export const Container = styled.div`
  height: 360px;
  display: flex;
  flex-direction: column;
+ box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
+
+ @media screen and (max-width:768px){
+     width: 337px;
+     margin-top: 100px;
+ }
  
 `
 
@@ -30,8 +36,6 @@ export const Contacts = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
     background-color: #ffff;
-    
-    
 `
 export const PhoneContainer = styled.div`
     margin: 0 auto;
