@@ -7,22 +7,23 @@ import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useDispatch } from "react-redux";
 import { creatingJobThunk } from "../../store/modules/jobsRequisitions/thunks";
+import { useState } from "react";
+import { creatingTechsThunk } from "../../store/modules/techsRequistions/thunks";
 
 const FormCreatingTech = ({handleModalTech}) => {
     const dispatch = useDispatch()
     const schema = yup.object().shape({
         title:yup.string().required("Nome do trabalho obrigatório"),
-        description:yup.string().required("Nome do trabalho obrigatório")
     }) 
     const { register,handleSubmit, formState:{ errors } } = useForm({
         resolver:yupResolver(schema)
     })
 
     const onSubmitFunction = (data) =>{
-        const toApi = {...data, deploy_url:"https://kenziehub.me" }
-        dispatch(creatingJobThunk(toApi))
+        const toApi = {...data, status:initialModule }
+        dispatch(creatingTechsThunk(toApi))
     }
-    const initialModule = 'Iniciante'
+    const [ initialModule, setInitialModule ] = useState('Iniciante')
     const modules = 
         [
             {
@@ -38,8 +39,8 @@ const FormCreatingTech = ({handleModalTech}) => {
                 label:"Avançado"
             }
         ]
-    const handleChange = () =>{
-
+    const handleChange = (e) =>{
+        setInitialModule(e.target.value)
     }
     return(
         <Container>

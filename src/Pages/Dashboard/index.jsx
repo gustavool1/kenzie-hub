@@ -8,10 +8,11 @@ import { useSelector } from 'react-redux'
 import { gettingJobsThunk } from '../../store/modules/jobsRequisitions/thunks.js'
 import FormCreatingJob from '../../Components/FormCreatingJob/index.jsx'
 import FormCreatingTech from '../../Components/FormCreatingTech/index.jsx'
+import ProfileCard from '../../Components/ProfileCard/index.jsx'
 const Dashboard = () =>{
     const dispatch = useDispatch()
     const { techs, jobs} = useSelector(store=>store)
-    const [ techModalIsOpen, setTechModalIsOpen ] = useState(true)
+    const [ techModalIsOpen, setTechModalIsOpen ] = useState(false)
     const [ jobModalIsOpen, setjobModalIsOpen ] = useState(false)
 
     const handleModalTech = () => {
@@ -48,6 +49,7 @@ const Dashboard = () =>{
                 {jobs.map((tech, key)=><CardTech key={key}tech={tech} isTech/>)}
                 </JobList>
             </JobTechContainer>
+            <ProfileCard/>
         </Container>
     )
 }

@@ -1,0 +1,1 @@
+export const gettingUserData = (userData) => ({type:"gettingUserData", userData})

@@ -20,3 +20,10 @@ export const Button = styled.button`
         color: var(--grey-50);
     }
 `
+
+export const Container = styled.div`
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+    width: 95%;
+`

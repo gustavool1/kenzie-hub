@@ -109,7 +109,6 @@ const Register = () =>{
                 label="Insira seu módulo"
                 value={moduleInitial}
                 onChange={handleChange}
-                // helperText={errors.course_module?.message}s
                 sx={{m:2, width:"95%"}}
             >
                 {modules.map((option) => (

@@ -1,9 +1,11 @@
-import { Button } from "./style.js"
+import { Button, Container } from "./style.js"
 
 const ButtonSecondary = ({ children, ...rest }) => {
     return(
         <>
-          <Button {...rest}>{ children }</Button>
+          <Container>
+            <Button {...rest}>{ children }</Button>
+          </Container>
         </>
     )
 }

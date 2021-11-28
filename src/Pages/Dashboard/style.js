@@ -24,6 +24,7 @@ export const JobModal = styled.div`
     align-items: center;
     width: 100vw;
     height: 100vh;
+    position: absolute;
 
 `
 export const CardTechContainer = styled.div`
